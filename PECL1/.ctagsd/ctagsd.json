@@ -1,9 +1,9 @@
 {
  "file_mask": "*.cpp;*.h;*.hpp;*.cxx;*.cc;*.hxx",
  "ignore_spec": "/.git/;/.svn/;/build/;/build-;/CPack_Packages/;/CMakeFiles/",
- "codelite_indexer": "C:\\Users\\manuc\\OneDrive\\Desktop\\codelite-amd64-17.0.0\\codelite-amd64-17.0.0\\codelite\\codelite-ctags.exe",
+ "codelite_indexer": "",
  "limit_results": 150,
- "search_path": ["."],
+ "search_path": [],
  "types": [{
    "key": "std::unique_ptr::pointer",
    "value": "_Tp"
