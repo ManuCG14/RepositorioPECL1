@@ -1,5 +1,7 @@
-C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Gestor.hpp
 C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Aficionado.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Gestor.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.cpp
 C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Aficionado.cpp
 C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Gestor.cpp
 C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\main.cpp
