@@ -1,9 +1,11 @@
-C:\RepositorioPECL1\PECL1\PECL1\Cola.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Gestor.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Aficionado.cpp
-C:\RepositorioPECL1\PECL1\PECL1\Arbol.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Aficionado.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Gestor.cpp
-C:\RepositorioPECL1\PECL1\PECL1\Cola.cpp
-C:\RepositorioPECL1\PECL1\PECL1\Arbol.cpp
-C:\RepositorioPECL1\PECL1\PECL1\main.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Lista.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Lista.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Aficionado.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Cola.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Aficionado.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Gestor.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Gestor.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Cola.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\main.cpp
