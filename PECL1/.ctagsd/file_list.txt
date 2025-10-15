@@ -1,5 +1,7 @@
+C:\RepositorioPECL1\PECL1\PECL1\Arbol.cpp
+C:\RepositorioPECL1\PECL1\PECL1\Gestor.cpp
 C:\RepositorioPECL1\PECL1\PECL1\Aficionado.hpp
 C:\RepositorioPECL1\PECL1\PECL1\Gestor.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Gestor.cpp
+C:\RepositorioPECL1\PECL1\PECL1\Arbol.hpp
 C:\RepositorioPECL1\PECL1\PECL1\Aficionado.cpp
 C:\RepositorioPECL1\PECL1\PECL1\main.cpp

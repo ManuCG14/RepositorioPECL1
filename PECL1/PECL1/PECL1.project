@@ -94,10 +94,12 @@
   </Settings>
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="Source Files">
+      <File Name="Arbol.cpp"/>
       <File Name="Gestor.cpp"/>
       <File Name="Aficionado.cpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Header Files">
+      <File Name="Arbol.hpp"/>
       <File Name="Gestor.hpp"/>
       <File Name="Aficionado.hpp"/>
     </VirtualDirectory>
