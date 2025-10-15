@@ -94,9 +94,11 @@
   </Settings>
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="Source Files">
+      <File Name="Gestor.cpp"/>
       <File Name="Aficionado.cpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Header Files">
+      <File Name="Gestor.hpp"/>
       <File Name="Aficionado.hpp"/>
     </VirtualDirectory>
     <File Name="main.cpp"/>
