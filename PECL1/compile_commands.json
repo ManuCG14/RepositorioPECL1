@@ -11,10 +11,6 @@
   "directory": "C:\\RepositorioPECL1\\PECL1\\PECL1",
   "command": "clang++ -c C:\\RepositorioPECL1\\PECL1\\PECL1\\Aficionado.cpp -o C:\\RepositorioPECL1\\PECL1\\PECL1\\Aficionado.cpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
  }, {
-  "file": "C:\\RepositorioPECL1\\PECL1\\PECL1\\main.cpp",
-  "directory": "C:\\RepositorioPECL1\\PECL1\\PECL1",
-  "command": "clang++ -c C:\\RepositorioPECL1\\PECL1\\PECL1\\main.cpp -o C:\\RepositorioPECL1\\PECL1\\PECL1\\main.cpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
- }, {
   "file": "C:\\RepositorioPECL1\\PECL1\\PECL1\\Aficionado.hpp",
   "directory": "C:\\RepositorioPECL1\\PECL1\\PECL1",
   "command": "clang++ -c C:\\RepositorioPECL1\\PECL1\\PECL1\\Aficionado.hpp -o C:\\RepositorioPECL1\\PECL1\\PECL1\\Aficionado.hpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
@@ -23,7 +19,19 @@
   "directory": "C:\\RepositorioPECL1\\PECL1\\PECL1",
   "command": "clang++ -c C:\\RepositorioPECL1\\PECL1\\PECL1\\Gestor.cpp -o C:\\RepositorioPECL1\\PECL1\\PECL1\\Gestor.cpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
  }, {
+  "file": "C:\\RepositorioPECL1\\PECL1\\PECL1\\Cola.cpp",
+  "directory": "C:\\RepositorioPECL1\\PECL1\\PECL1",
+  "command": "clang++ -c C:\\RepositorioPECL1\\PECL1\\PECL1\\Cola.cpp -o C:\\RepositorioPECL1\\PECL1\\PECL1\\Cola.cpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
+ }, {
   "file": "C:\\RepositorioPECL1\\PECL1\\PECL1\\Arbol.cpp",
   "directory": "C:\\RepositorioPECL1\\PECL1\\PECL1",
   "command": "clang++ -c C:\\RepositorioPECL1\\PECL1\\PECL1\\Arbol.cpp -o C:\\RepositorioPECL1\\PECL1\\PECL1\\Arbol.cpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
+ }, {
+  "file": "C:\\RepositorioPECL1\\PECL1\\PECL1\\main.cpp",
+  "directory": "C:\\RepositorioPECL1\\PECL1\\PECL1",
+  "command": "clang++ -c C:\\RepositorioPECL1\\PECL1\\PECL1\\main.cpp -o C:\\RepositorioPECL1\\PECL1\\PECL1\\main.cpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
+ }, {
+  "file": "C:\\RepositorioPECL1\\PECL1\\PECL1\\Cola.hpp",
+  "directory": "C:\\RepositorioPECL1\\PECL1\\PECL1",
+  "command": "clang++ -c C:\\RepositorioPECL1\\PECL1\\PECL1\\Cola.hpp -o C:\\RepositorioPECL1\\PECL1\\PECL1\\Cola.hpp.o  -I. -I.  -gdwarf-2  -O0  -Wall"
  }]
