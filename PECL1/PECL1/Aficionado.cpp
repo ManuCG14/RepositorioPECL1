@@ -1,6 +1,5 @@
 #include "Aficionado.hpp"
-#include <iostream>
-#include <cstdlib>
+
 
 Aficionado::Aficionado(int id) {
     this->id = id;

@@ -1,10 +1,9 @@
 #include "NodoPila.hpp"
 
-NodoPila::NodoPila()
+NodoPila::NodoPila(Aficionado afi, NodoPila* sig)
 {
+    aficionado = afi;
+    siguiente = sig;
 }
 
-NodoPila::~NodoPila()
-{
-}
-
+NodoPila::~NodoPila() {}
