@@ -1,6 +1,5 @@
 #include "Aficionado.hpp"
 
-Aficionado::Aficionado() : id(0), hora(0), socio(false) {}
 
 Aficionado::Aficionado(int id) {
 
