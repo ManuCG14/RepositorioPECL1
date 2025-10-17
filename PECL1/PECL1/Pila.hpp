@@ -6,7 +6,15 @@ class Pila
 public:
 	Pila();
 	~Pila();
-	void insertar()
+	void insertar(Aficionado afi);
+	Aficionado extraer();
+	Aficionado cima();
+	void mostrar();
+	int getlongitud();
+	
+private:
+	pnodoPila ultimo;
+	int longitud;
 
 };
 
