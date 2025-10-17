@@ -1,9 +1,19 @@
 // #include "Gestor.hpp"
 #include <iostream>
 using namespace std;
+#include "Aficionado.hpp"
 
 int main(int argc, char** argv)
 {
+	srand(time(0)); 
+
+    // Prueba aficionado
+    Aficionado a1(1);
+    Aficionado a2(2);
+
+    a1.mostrarInfo();
+    a2.mostrarInfo();
+	
 	// Gestor gestor;
 	char opcion;
 
