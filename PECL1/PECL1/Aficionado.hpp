@@ -2,7 +2,6 @@
 #define AFICIONADO_HPP
 
 #include <iostream>
-#include <iostream>
 #include <cstdlib>
 using namespace std;
 
