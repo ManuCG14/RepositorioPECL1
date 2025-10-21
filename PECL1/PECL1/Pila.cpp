@@ -18,14 +18,37 @@ Aficionado Pila::extraer();{
 	if(!ultimo)
 		return 0;
 	nodo = ultimo;
-	ultimo = nodo->siguente;
+	ultimo = nodo->siguinte;
 	afi =  nodo->aficionado;
 	longitud--;
 	delete nodo;
 	return afi;
 } 	 	
-
+int Pila::cima(){
+	pnodoPila nodo;
+	if(!ultimo)
+		return 0;
+	return ultimo->aficionado;
+}
+void Pila::mostrar(){
+	pnodoPila aux = ultimo;
+	cout << "\tEl contenido de la pila es: ";
+	while(aux) {
+	cout << "-> " << aux->aficionado;
+	aux = aux->siguiente;
+	}
+	cout <<endl;
+}
+int Pila::getLongitud(){
+	return this->longitud;
+}
 Pila::~Pila()
 {
+	pnodoPila aux;
+	while(ultimo){
+		aux = ultimo;
+		ultimo= ultimo-> siguiente;
+		delete aux;
+	}
 }
 
