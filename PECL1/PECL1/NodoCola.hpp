@@ -1,14 +1,15 @@
 #include <iostream>
+#include "Aficionado.hpp"
 using namespace std; 
 
 class NodoCola
 {
 public:
-	NodoCola(int v, NodoCola* sig = NULL);
+	NodoCola(Aficionado v, NodoCola* sig = NULL);
 	~NodoCola();
 	
 private:
-	int valor;
+	Aficionado valor;
 	NodoCola* siguiente;
 	
 	friend class Cola;
