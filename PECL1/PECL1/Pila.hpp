@@ -1,6 +1,7 @@
 #ifndef PILA_HPP
 #define PILA_HPP
 #include "NodoPila.hpp"	
+#include "iostream"
 class Pila
 {
 public:
