@@ -4,6 +4,7 @@
 #include "Pila.hpp"
 #include "Cola.hpp"
 #include "Lista.hpp"
+#include "Aficionado.hpp"
 class Gestor
 {
 public:
