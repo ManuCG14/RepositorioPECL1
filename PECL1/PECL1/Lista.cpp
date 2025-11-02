@@ -3,114 +3,122 @@
 Lista::Lista()
 {
     primero = nullptr;
+    ultimo = nullptr;
     longitud = 0;
 }
 
-bool Lista::estaVacia()
+Lista::~Lista()
+{
+    vaciar();
+}
+
+bool Lista::estaVacia() const
 {
     return primero == nullptr;
 }
 
-int Lista::getLongitud()
+void Lista::vaciar()
 {
-    return longitud;
+    while (primero)
+    {
+        NodoLista* aux = primero;
+        primero = primero->siguiente;
+        delete aux->aficionado;
+        delete aux;
+    }
+    ultimo = nullptr;
+    longitud = 0;
 }
 
-void Lista::insertarOrdenado(Aficionado* aficionado)
+// Según la hora de llegada
+void Lista::insertarOrdenado(Aficionado* a)
 {
-    pnodoLista nuevo = new NodoLista(aficionado);
-    pnodoLista actual = primero;
-    pnodoLista anterior = nullptr;
+    NodoLista* nuevo = new NodoLista(a);
 
-    // Insertar ordenado por tiempo de llegada
-    while (actual && actual->dato->getTiempoLlegada() <= aficionado->getTiempoLlegada())
-    {
-        anterior = actual;
-        actual = actual->siguiente;
-    }
-
-    if (anterior == nullptr)
+    if (!primero || a->getHora() < primero->aficionado->getHora())
     {
         nuevo->siguiente = primero;
         primero = nuevo;
+        if (!ultimo)
+            ultimo = nuevo;
     }
     else
     {
-        nuevo->siguiente = actual;
-        anterior->siguiente = nuevo;
+        NodoLista* actual = primero;
+        while (actual->siguiente && actual->siguiente->aficionado->getHora() <= a->getHora())
+        {
+            actual = actual->siguiente;
+        }
+        nuevo->siguiente = actual->siguiente;
+        actual->siguiente = nuevo;
+        if (!nuevo->siguiente)
+            ultimo = nuevo;
     }
 
     longitud++;
 }
 
-void Lista::mostrar()
+void Lista::mostrar() const
 {
-    if (estaVacia())
+    if (!primero)
     {
-        cout << "La lista está vacía." << endl;
+        cout << "\t[La lista está vacía]\n";
         return;
     }
 
-    pnodoLista aux = primero;
-    cout << "\nOrden de entrada al estadio:\n";
+    cout << "\n\tContenido de la lista (ordenado por hora de llegada):\n";
+    NodoLista* aux = primero;
     while (aux)
     {
-        aux->dato->mostrar();
+        cout << "\t";
+        aux->aficionado->mostrarInfo();
         aux = aux->siguiente;
     }
     cout << endl;
 }
 
-Aficionado* Lista::getPrimero()
+// Consulta
+
+int Lista::getLongitud() const
 {
-    if (estaVacia())
-        return nullptr;
-    return primero->dato;
+    return longitud;
 }
 
-Aficionado* Lista::getUltimo()
+Aficionado* Lista::getPrimero() const
 {
-    if (estaVacia())
-        return nullptr;
-
-    pnodoLista aux = primero;
-    while (aux->siguiente)
-        aux = aux->siguiente;
-
-    return aux->dato;
+    return (primero ? primero->aficionado : nullptr);
 }
 
-Aficionado* Lista::getPrimerSocio()
+Aficionado* Lista::getUltimo() const
 {
-    pnodoLista aux = primero;
+    return (ultimo ? ultimo->aficionado : nullptr);
+}
+
+// Devuelve el último socio que accede (recorremos hasta el final)
+Aficionado* Lista::getPrimerSocio() const
+{
+    NodoLista* aux = primero;
+    Aficionado* socio = nullptr;
+
     while (aux)
     {
-        if (aux->dato->esSocio()) 
-            return aux->dato;
+        if (aux->aficionado->esSocio())
+            socio = aux->aficionado;
+        aux = aux->siguiente;
+    }
+
+    return socio;
+}
+
+// Devuelve el primer simpatizante en acceder
+Aficionado* Lista::getPrimerSimpatizante() const
+{
+    NodoLista* aux = primero;
+    while (aux)
+    {
+        if (!aux->aficionado->esSocio())
+            return aux->aficionado;
         aux = aux->siguiente;
     }
     return nullptr;
-}
-
-Aficionado* Lista::getPrimerSimpatizante()
-{
-    pnodoLista aux = primero;
-    while (aux)
-    {
-        if (!aux->dato->esSocio()) 
-            return aux->dato;
-        aux = aux->siguiente;
-    }
-    return nullptr;
-}
-
-Lista::~Lista()
-{
-    pnodoLista aux;
-    while (primero)
-    {
-        aux = primero;
-        primero = primero->siguiente;
-        delete aux;
-    }
 }

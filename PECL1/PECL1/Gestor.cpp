@@ -1,141 +1,135 @@
 #include "Gestor.hpp"
+using namespace std;
 
 Gestor::Gestor()
 {
-    // El primer rango de IDs será 1-10.
-    // Usamos 1 como inicio, se actualizará a 11 la próxima vez, etc.
-    contadorID = 1;
-    // Las estructuras se inicializan con sus constructores por defecto.
+    srand(time(0));
+    bloqueActual = 0;
 }
 
-Gestor::~Gestor() {}
-int Gestor::AficionadosEnPila() const { return pilaAficionados.getlongitud(); }
+// Consultas
+int Gestor::AficionadosEnPila() const { return pila.getlongitud(); }
 int Gestor::SociosEnCola() const { return colaSocios.getLongitud(); }
 int Gestor::SimpatizantesEnCola() const { return colaSimpatizantes.getLongitud(); }
-int Gestor::AficionadosEnLista() const { return listaAcceso.getLongitud(); }
+int Gestor::AficionadosEnLista() const { return lista.getLongitud(); }
+// ------------------------------------------------------
+
+// Generar 10 aficionados nuevos y apilarlos
 void Gestor::genera10Aficionados()
 {
-    for(int i = 0; i < 10; ++i) {
-        Aficionado nuevoAfi(contadorID);
-    }
-    pilaAficionados.insertar(nuevoAfi);
-    contadorID++;
-    std::cout << "Se han genrado 10 aficionados";
+    bloqueActual++;
+    int inicio = (bloqueActual - 1) * 10 + 1;
+    int fin = bloqueActual * 10;
+    generarBloque(inicio, fin);
+    cout << "\tSe han generado 10 aficionados (" << inicio << "-" << fin << ") en la pila.\n";
 }
+
+void Gestor::generarBloque(int inicio, int fin)
+{
+    for (int i = inicio; i <= fin; i++)
+    {
+        int llegada = rand() % 60;
+        bool socio = (i % 2 == 0);
+        Aficionado a(i, llegada, socio);
+        pila.insertar(a);
+    }
+}
+
+// Mostrar pila
+void Gestor::muestraAficionados()
+{
+    pila.mostrar();
+}
+
+// Borrar pila
 void Gestor::borraAficionadosPila()
 {
-    std::cout << "\nBorrando aficiondos de la pila";
-    pilaAficionados.~Pila()
+    while (pila.getlongitud() > 0)
+        pila.extraer();
+    cout << "\tPila vaciada correctamente.\n";
 }
-void Gestor::muestraAficionadosPila() const
-{
-    std::cout << "\nMostrando contenido en pila:\n";
-    pilaAficionados.mostrar();
-}
+
+// Pasar aficionados de pila a colas
 void Gestor::encolarAficionados()
 {
-    if(pilaAficionados.getlongitud() == 0) {
-        std::cout << "\nNo hay suficientes aficionados para encolar";
-        return;
+    while (pila.getlongitud() > 0)
+    {
+        Aficionado a = pila.extraer();
+        if (a.esSocio())
+            colaSocios.insertar(a);
+        else
+            colaSimpatizantes.insertar(a);
     }
-    std::cout << "\nEncolando aficionado por tipo";
-    while(pilaAficionados.getlongitud() > 0) {
-        Aficionado afi = pilaAficionados.extraer();
-        if(afi.esSocio()) {
-            colaSocios.insertar(afi);
-            std::cout << "  -> Socio con ID " << afi.getId() << " encolado en cola Socios.\n";
-        } else {
-            colaSimpatizantes.insertar(afi);
-            std::cout << "  -> Simpatizante con ID " << afi.getId() << " encolado en cola Simpatizantes.\n";
-        }
-    }
-    std::cout << "Proceso completado. Pila vacía. Total Socios: " << colaSocios.getLongitud()
-              << ", Total Simpatizantes: " << colaSimpatizantes.getLongitud() << ".\n";
+    cout << "\tAficionados movidos a colas según su tipo.\n";
 }
-void Gestor::muestraSociosCola() const
+
+// Mostrar colas
+void Gestor::muestraSociosCola() { colaSocios.mostrar(); }
+void Gestor::muestraSimpatizantesCola() { colaSimpatizantes.mostrar(); }
+
+// Borrar colas
+void Gestor::borraAficionadosColas()
 {
-    std::cout << "\n[Opción E] Contenido de la Cola de Socios:\n";
-    colaSocios.mostrar();
+    while (!colaSocios.estaVacia()) colaSocios.eliminar();
+    while (!colaSimpatizantes.estaVacia()) colaSimpatizantes.eliminar();
+    cout << "\tColas vaciadas correctamente.\n";
 }
-void Gestor::muestraSimpatizantesCola() const
-{
-    std::cout << "\n[Opción F] Contenido de la Cola de Simpatizantes:\n";
-    colaSimpatizantes.mostrar();
-}
-void Gestor::borrarAficionaodosColas()
-{
-    std::cout << "\nBorrando aficionados de las Colas\n";
-    while(!colaSocios.estaVacia()) {
-        colaSocios.eliminar();
-    }
-    while(!colaSimpatizantes.estaVacia()) {
-        colaSimpatizantes.eliminar();
-    }
-}
+
+// Pasar aficionados de colas a lista (ordenada por hora de llegada)
 void Gestor::enlistarAficionados()
 {
-    if(colaSocios.estaVacia() && colaSimpatizantes.estaVacia()) {
-        std::cout << "\nAmbas Colas están vacías. No hay aficionados para enlistar.\n";
-        return;
+    while (!colaSocios.estaVacia())
+    {
+        Aficionado a = colaSocios.eliminar();
+        lista.insertarOrdenado(new Aficionado(a));
     }
-    if(!listaAcceso.estaVacia()) {
-        std::cout << "\nLa lista de acceso ya contiene aficionados. Se vaciará primero.\n";
-        listaAcceso.~Lista();
+    while (!colaSimpatizantes.estaVacia())
+    {
+        Aficionado a = colaSimpatizantes.eliminar();
+        lista.insertarOrdenado(new Aficionado(a));
     }
-    std::cout << "Insertando Socios en la Lista (ordenados por hora de llegada)\n";
-    while(!colaSocios.estaVacia()) {
-        Aficionado afi = colaSocios.eliminar();
-        listaAcceso.insertarOrdenado(new Aficionado(afi.getId()));
-    }
-    std::cout << "Insertando Simpatizantes en la Lista (ordenados por hora de llegada)\n";
-    while(!colaSimpatizantes.estaVacia()) {
-        Aficionado afi = colaSimpatizantes.eliminar();
-        listaAcceso.insertarOrdenado(new Aficionado(afi.getId()));
-    }
-    listaAcceso.mostrar();
+    cout << "\tLista generada y ordenada por hora de llegada.\n";
+    lista.mostrar();
 }
-void Gestor::buscarAficionados() const
+
+// Buscar aficionados especiales
+void Gestor::buscarAficionados()
 {
-    std::cout << "\nBúsqueda de Aficionados:\n";
+    Aficionado* primero = lista.getPrimero();
+    Aficionado* ultimo = lista.getUltimo();
+    Aficionado* primerSocio = lista.getPrimerSocio();
+    Aficionado* primerSimpatizante = lista.getPrimerSimpatizante();
 
-    if(listaAcceso.estaVacia()) {
-        std::cout << "La lista de acceso está vacía. Ejecute la Opción H primero.\n";
-        return;
+    cout << "\n\t-- Resultados de búsqueda en lista --\n";
+    if (primero)
+    {
+        cout << "\tPrimer aficionado en acceder:\n\t";
+        primero->mostrar();
     }
-    Aficionado* primero = listaAcceso.getPrimero();
-    Aficionado* ultimoSocio = listaAcceso.getUltimoSocio();
-    Aficionado* primerSimpatizante = listaAcceso.getPrimerSimpatizante();
-    Aficionado* ultimo = listaAcceso.getUltimo();
-    std::cout << "\n** Primer Aficionado en acceder al estadio (menor hora de llegada): **\n\t";
-    if(primero)
-        primero->mostrarInfo();
-    else
-        std::cout << "No encontrado.\n";
-
-    std::cout << "\n** Último Socio en acceder al estadio: **\n\t";
-    if(ultimoSocio)
-        ultimoSocio->mostrarInfo();
-    else
-        std::cout << "No encontrado.\n";
-
-    std::cout << "\n** Primer Simpatizante en acceder al estadio: **\n\t";
-    if(primerSimpatizante)
-        primerSimpatizante->mostrarInfo();
-    else
-        std::cout << "No encontrado.\n";
-
-    std::cout << "\n** Último Aficionado en acceder al estadio (mayor hora de llegada): **\n\t";
-    if(ultimo)
-        ultimo->mostrarInfo();
-    else
-        std::cout << "No encontrado.\n";
+    if (primerSocio)
+    {
+        cout << "\tÚltimo socio en acceder:\n\t";
+        primerSocio->mostrar();
+    }
+    if (primerSimpatizante)
+    {
+        cout << "\tPrimer simpatizante en acceder:\n\t";
+        primerSimpatizante->mostrar();
+    }
+    if (ultimo)
+    {
+        cout << "\tÚltimo aficionado en acceder:\n\t";
+        ultimo->mostrar();
+    }
 }
+
+// Reiniciar gestor
 void Gestor::reiniciar()
 {
-    std::cout << "\nReiniciando el estado del programa...\n";
-    borraAficionadosPila();
-    borraAficionadosColas();
-    listaAcceso.~Lista();
-    contadorID = 1;
-    
+    pila = Pila();
+    colaSocios = Cola();
+    colaSimpatizantes = Cola();
+    lista = Lista();
+    bloqueActual = 0;
+    cout << "\tSistema reiniciado.\n";
 }

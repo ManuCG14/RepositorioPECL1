@@ -23,7 +23,7 @@ Aficionado Cola::eliminar()
     if (!primero)
     {
         cout << "\t[La cola está vacía]\n";
-        return Aficionado(-1); // Devuelve un Aficionado "inválido"
+        return Aficionado(-1); 
     }
 
     pnodoCola nodo = primero;

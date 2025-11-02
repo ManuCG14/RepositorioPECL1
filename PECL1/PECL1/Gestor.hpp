@@ -4,56 +4,41 @@
 #include "Pila.hpp"
 #include "Cola.hpp"
 #include "Lista.hpp"
-#include "Aficionado.hpp"
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+
 class Gestor
 {
 public:
-	Gestor();
-	~Gestor();
-	// Contadores para el menú principal
+    Gestor();
+
+    // Consultas de conteo
     int AficionadosEnPila() const;
     int SociosEnCola() const;
     int SimpatizantesEnCola() const;
     int AficionadosEnLista() const;
-    
-    // Opción A: Generar 10 Aficionados
-    void genera10Aficionados();
-    
-    // Opción B: Mostrar Pila
-    void muestraAficionadosPila() const;
-    
-    // Opción C: Borrar Pila
-    void borraAficionadosPila();
-    
-    // Opción D: Pila -> Colas
-    void encolarAficionados();
-    
-    // Opción E: Mostrar Cola Socios
-    void muestraSociosCola() const;
-    
-    // Opción F: Mostrar Cola Simpatizantes
-    void muestraSimpatizantesCola() const;
-    
-    // Opción G: Borrar Colas
-    void borraAficionadosColas();
-    
-    // Opción H: Colas -> Lista Ordenada
-    void enlistarAficionados();
-    
-    // Opción I: Búsqueda en Lista
-    void buscarAficionados() const;
 
-    // Opción J: Reiniciar el programa
+    // Funciones de menú
+    void genera10Aficionados();
+    void muestraAficionados();
+    void borraAficionadosPila();
+    void encolarAficionados();
+    void muestraSociosCola();
+    void muestraSimpatizantesCola();
+    void borraAficionadosColas();
+    void enlistarAficionados();
+    void buscarAficionados();
     void reiniciar();
 
 private:
-    Pila pilaAficionados;
+    Pila pila;
     Cola colaSocios;
     Cola colaSimpatizantes;
-    Lista listaAcceso;
-    
-    // Variable para controlar el rango de IDs (1-10, 11-20, etc.)
-    int contadorID;
+    Lista lista;
+    int bloqueActual; // controla el rango de IDs (1–10, 11–20, etc.)
+
+    void generarBloque(int inicio, int fin);
 };
 
 #endif // GESTOR_HPP
