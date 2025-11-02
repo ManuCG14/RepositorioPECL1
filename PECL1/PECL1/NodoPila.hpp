@@ -14,7 +14,7 @@ private:
 	friend class Pila;
 	friend class Aficionado;
 };
-typedef NodoPila* p	nodoPila;
+typedef NodoPila* pnodoPila;
 	
 
 #endif // NODOPILA_HPP
