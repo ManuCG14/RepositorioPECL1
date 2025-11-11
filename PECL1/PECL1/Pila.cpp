@@ -2,69 +2,64 @@
 
 Pila::Pila()
 {
-    ultimo = nullptr;
-    longitud = 0;
+	ultimo = nullptr;
+	longitud = 0;
 }
 
-void Pila::insertar(Aficionado afi)
+void Pila::insertar(Aficionado* aficionado)
 {
-    pnodoPila nuevo = new NodoPila(afi, ultimo);
-    ultimo = nuevo;
-    longitud++;
+	pnodoPila nuevo;
+	nuevo = new NodoPila(aficionado,ultimo);
+	ultimo = nuevo;
+	longitud++;
 }
 
-Aficionado Pila::extraer()
+Aficionado* Pila::extraer()
 {
-    if (!ultimo)
-    {
-        cout << "\t[La pila está vacía]\n";
-        return Aficionado(-1, 0, false); 
-    }
-
-    pnodoPila nodo = ultimo;
-    Aficionado afi = nodo->aficionado;
-    ultimo = nodo->siguiente;
-    delete nodo;
-    longitud--;
-    return afi;
+	pnodoPila nodo;
+	Aficionado* aficionado;
+	if(!ultimo)
+		return nullptr;
+	nodo = ultimo;
+	ultimo = nodo->siguiente;
+	aficionado = nodo -> dato;
+	longitud--;
+	delete nodo;
+	return aficionado;
 }
 
-Aficionado Pila::cima() const
+Aficionado* Pila::cima()
 {
-    if (!ultimo)
-    {
-        cout << "\t[La pila está vacía]\n";
-        return Aficionado(-1, 0, false);
-    }
-    return ultimo->aficionado;
+	pnodoPila nodo;
+	if(!ultimo)
+		return nullptr;
+	return ultimo -> dato;
 }
 
-void Pila::mostrar() const
+void Pila::mostrar()
 {
-    if (!ultimo)
-    {
-        cout << "\t[La pila está vacía]\n";
-        return;
-    }
-
     pnodoPila aux = ultimo;
-    cout << "\n\tContenido de la pila (de arriba a abajo):\n";
+    cout << "\nContenido de la pila:\n";
     while (aux)
     {
-        cout << "\t\t";
-        aux->aficionado.mostrarInfo();
+        aux->dato->mostrar();
         aux = aux->siguiente;
     }
     cout << endl;
 }
 
-int Pila::getlongitud() const
+int Pila::getLongitud()
 {
-    return longitud;
+	return this->longitud;
 }
 
 Pila::~Pila()
 {
-    while (ultimo)
-        extraer();
+	pnodoPila aux;
+	while(ultimo){
+		aux = ultimo;
+		ultimo = ultimo->siguiente;
+        delete aux->dato; // libera el Aficionado almacenado
+        delete aux;       // libera el nodo
+}
 }

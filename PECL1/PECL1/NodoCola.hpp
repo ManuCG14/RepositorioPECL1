@@ -1,21 +1,21 @@
-#include <iostream>
+#ifndef NODOCOLA_HPP
+#define NODOCOLA_HPP
 #include "Aficionado.hpp"
-using namespace std; 
+#include <iostream>
+using namespace std;
 
 class NodoCola
 {
 public:
-	NodoCola(Aficionado v, NodoCola* sig = NULL);
+	NodoCola(Aficionado* aficionado, NodoCola* sig = nullptr);
 	~NodoCola();
-	
+
 private:
-	Aficionado valor;
+	Aficionado* dato;
 	NodoCola* siguiente;
-	
 	friend class Cola;
-
 };
-
 typedef NodoCola* pnodoCola;
 
+#endif // NODOCOLA_HPP
 

@@ -1,51 +1,43 @@
 #include "Aficionado.hpp"
 
-
-Aficionado::Aficionado()
-{
-    id = -1;
-    hora = 0;
-    socio = false;
-}
-
 Aficionado::Aficionado(int id)
 {
-    this->id = id;
-    this->hora = rand() % 60;     
-    this->socio = (id % 2 == 0);  
+	this->id = id;
+	this->tiempoLlegada = rand() % 60; //genera un tiempo de llegada random entre 0 y 59, ambos incluídos.
+	this->socio = (this->id % 2 == 0);
 }
 
-Aficionado::Aficionado(int id, int hora, bool socio)
+int Aficionado::getId()
 {
-    this->id = id;
-    this->hora = hora;
-    this->socio = socio;
+	return this->id;
+}
+bool Aficionado::esSocio()
+{
+	return this->socio; //1 es socio, 0 es simpatizante
+}
+int Aficionado::getTiempoLlegada()
+{
+	return this->tiempoLlegada;
 }
 
-// Destructor
-Aficionado::~Aficionado() {}
-
-// Getters
-int Aficionado::getId() const { return id; }
-int Aficionado::getHora() const { return hora; }
-bool Aficionado::esSocio() const { return socio; }
-int Aficionado::getTiempoLlegada() const { return hora; }
-
-// Setters
-void Aficionado::setId(int nuevoId) { id = nuevoId; }
-void Aficionado::setHora(int nuevaHora) { hora = nuevaHora; }
-void Aficionado::setSocio(bool nuevoSocio) { socio = nuevoSocio; }
-
-// Mostrar información 
-void Aficionado::mostrarInfo() const
+void Aficionado::setId(int id)
 {
-    std::cout << "Tipo: " << (socio ? "Socio" : "Simpatizante")
-              << " | Hora de llegada: 18:"<< hora
-              << " | ID: " << id
-              << std::endl;
+	this->id = id;
 }
 
-void Aficionado::mostrar() const
+void Aficionado::setTiempoLlegada(int tiempoLlegada)
 {
-    mostrarInfo();
+	this->tiempoLlegada = tiempoLlegada;
+}
+
+void Aficionado::mostrar()
+{
+    cout << "ID: " << setw(3) << id
+         << " | Llegada: " << setw(2) << tiempoLlegada << "min"
+         << " | Tipo: " << (socio ? "Socio" : "Simpatizante")
+         << endl;
+}
+
+Aficionado::~Aficionado()
+{
 }

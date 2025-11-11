@@ -1,44 +1,30 @@
 #ifndef LISTA_HPP
 #define LISTA_HPP
-
-#include "Aficionado.hpp"
+#include "NodoLista.hpp"
 #include <iostream>
 using namespace std;
 
-class NodoLista
-{
-public:
-    Aficionado* aficionado;
-    NodoLista* siguiente;
-
-    NodoLista(Aficionado* a, NodoLista* sig = nullptr)
-        : aficionado(a), siguiente(sig) {}
-};
-
 class Lista
 {
-private:
-    NodoLista* primero;
-    NodoLista* ultimo;
-    int longitud;
-
 public:
     Lista();
     ~Lista();
 
-    void insertarOrdenado(Aficionado* a);
-    void mostrar() const;
+    void insertarOrdenado(Aficionado* aficionado);
+    void mostrar();
 
-    // Consulta
-    int getLongitud() const;
-    Aficionado* getPrimero() const;
-    Aficionado* getUltimo() const;
-    Aficionado* getPrimerSocio() const;
-    Aficionado* getPrimerSimpatizante() const;
+    bool estaVacia();
+    int getLongitud();
 
-    //Gestion
-    bool estaVacia() const;
-    void vaciar();
+    // Métodos usados por Gestor
+    Aficionado* getPrimero();
+    Aficionado* getUltimo();
+    Aficionado* getPrimerSocio();
+    Aficionado* getPrimerSimpatizante();
+
+private:
+    pnodoLista primero;
+    int longitud;
 };
 
 #endif // LISTA_HPP

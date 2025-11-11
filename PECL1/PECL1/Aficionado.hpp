@@ -1,37 +1,33 @@
 #ifndef AFICIONADO_HPP
 #define AFICIONADO_HPP
-
 #include <iostream>
 #include <cstdlib>
+#include <iomanip>
+using namespace std;
+
 
 class Aficionado
 {
 private:
-    int id;     
-    int hora;   
-    bool socio; 
-
+	int id;             // identificador único
+	int tiempoLlegada;  // minutos desde las 18:00 hasta las 18:59
+	bool socio;       // true = socio, false = simpatizante
+	
 public:
-    // Constructores y destructor
-    Aficionado();                                
-    Aficionado(int id);                          
-    Aficionado(int id, int hora, bool socio);    
-    ~Aficionado();                               
+	Aficionado(int id);
+		
+		int getId();
+		int getTiempoLlegada();
+		bool esSocio();
 
-    // Getters
-    int getId() const;
-    int getHora() const;
-    bool esSocio() const;
-    int getTiempoLlegada() const; 
+		void setId(int id);
+		void setTiempoLlegada(int h);
+		void mostrar();
+		
+		void generarId();
+	
+	~Aficionado();
 
-    // Setters
-    void setId(int nuevoId);
-    void setHora(int nuevaHora);
-    void setSocio(bool nuevoSocio);
-
-    // Mostrar información
-    void mostrarInfo() const;
-    void mostrar() const; 
 };
 
 #endif // AFICIONADO_HPP

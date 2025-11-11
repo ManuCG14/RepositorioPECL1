@@ -2,73 +2,66 @@
 
 Cola::Cola()
 {
-    primero = NULL;
-    ultimo = NULL;
+    primero = nullptr;
+    ultimo = nullptr;
     longitud = 0;
 }
 
-void Cola::insertar(Aficionado v)
+void Cola::insertar(Aficionado* aficionado)
 {
-    pnodoCola nuevo = new NodoCola(v);
+    pnodoCola nuevo = new NodoCola(aficionado);
     if (ultimo)
         ultimo->siguiente = nuevo;
+
     ultimo = nuevo;
+
     if (!primero)
         primero = nuevo;
     longitud++;
 }
 
-Aficionado Cola::eliminar()
+Aficionado* Cola::eliminar()
 {
     if (!primero)
-    {
-        cout << "\t[La cola está vacía]\n";
-        return Aficionado(-1); 
-    }
+        return nullptr;
 
     pnodoCola nodo = primero;
-    Aficionado v = nodo->valor;
+    Aficionado* aficionado = nodo->dato;
     primero = nodo->siguiente;
-    if (!primero)
-        ultimo = NULL;
-
     delete nodo;
+
+    if (!primero)
+        ultimo = nullptr;
+
     longitud--;
-    return v;
+    return aficionado;
 }
 
-void Cola::mostrar() const
+Aficionado* Cola::verPrimero()
 {
-    if (!primero)
-    {
-        cout << "\t[La cola está vacía]\n";
-        return;
-    }
+    return primero ? primero->dato : nullptr;
+}
 
+bool Cola::estaVacia() 
+{
+    return primero == nullptr;
+}
+
+int Cola::getLongitud() 
+{
+    return longitud;
+}
+
+void Cola::mostrar()
+{
     pnodoCola aux = primero;
-    cout << "\tContenido de la cola:\n";
+    cout << "\nContenido de la cola:\n";
     while (aux)
     {
-        cout << "\t\t";
-        aux->valor.mostrarInfo();
+        aux->dato->mostrar();
         aux = aux->siguiente;
     }
     cout << endl;
-}
-
-Aficionado Cola::verPrimero() const
-{
-    if (!primero)
-    {
-        cout << "\t[La cola está vacía]\n";
-        return Aficionado(-1);
-    }
-    return primero->valor;
-}
-
-bool Cola::estaVacia() const
-{
-    return primero == NULL;
 }
 
 Cola::~Cola()
@@ -76,3 +69,4 @@ Cola::~Cola()
     while (primero)
         eliminar();
 }
+

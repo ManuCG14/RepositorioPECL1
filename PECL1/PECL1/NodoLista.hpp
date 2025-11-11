@@ -1,18 +1,18 @@
 #ifndef NODOLISTA_HPP
 #define NODOLISTA_HPP
-
 #include "Aficionado.hpp"
 
 class NodoLista
 {
 public:
-    Aficionado aficionado;   
-    NodoLista* siguiente;
+	NodoLista(Aficionado* aficionado, NodoLista* sig = nullptr);
+	~NodoLista();
+private:
+	Aficionado* dato;
+	NodoLista* siguiente;
+	friend class Lista;
 
-    NodoLista(Aficionado a, NodoLista* sig = nullptr)
-        : aficionado(a), siguiente(sig) {}
-
-    
 };
+typedef NodoLista* pnodoLista;
 
-#endif
+#endif // NODOLISTA_HPP
