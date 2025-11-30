@@ -29,6 +29,10 @@ void Aficionado::setTiempoLlegada(int tiempoLlegada)
 {
 	this->tiempoLlegada = tiempoLlegada;
 }
+void Aficionado::setSocio(bool s) // 
+{
+    this->socio = s;
+}
 
 void Aficionado::mostrar()
 {

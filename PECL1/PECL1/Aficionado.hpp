@@ -22,6 +22,7 @@ public:
 
 		void setId(int id);
 		void setTiempoLlegada(int h);
+		void setSocio(bool s);
 		void mostrar();
 		
 		void generarId();

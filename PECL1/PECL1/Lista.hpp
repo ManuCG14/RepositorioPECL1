@@ -25,6 +25,7 @@ public:
 private:
     pnodoLista primero;
     int longitud;
+	friend class Arbol;
 };
 
 #endif // LISTA_HPP

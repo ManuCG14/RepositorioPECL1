@@ -11,6 +11,7 @@ private:
 	Aficionado* dato;
 	NodoLista* siguiente;
 	friend class Lista;
+	friend class Arbol;
 
 };
 typedef NodoLista* pnodoLista;

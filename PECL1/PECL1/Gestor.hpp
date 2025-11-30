@@ -5,6 +5,7 @@
 #include "Cola.hpp"
 #include "Lista.hpp"
 #include "Pila.hpp"
+#include "Arbol.hpp"
 
 #include <cstdlib>
 #include <ctime>
@@ -49,6 +50,7 @@ private:
     Cola colaSimpatizantes;
     Lista listaAcceso;
     int idInicio;
+	Arbol abbAficionados;
 };
 
-#endif // GESTOR_HPP
+#endif // GESTOR_HPP	
