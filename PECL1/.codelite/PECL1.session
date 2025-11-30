@@ -1,19 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session Name="C:\RepositorioPECL1\PECL1\PECL1.workspace">
-  <int Value="0" Name="m_selectedTab"/>
-  <wxString Value="C:\RepositorioPECL1\PECL1\PECL1.workspace" Name="m_workspaceName"/>
+<Session Name="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1.workspace">
+  <int Value="4" Name="m_selectedTab"/>
+  <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\RepositorioPECL1\PECL1\PECL1\Pila.cpp" Name="FileName"/>
-      <int Value="21" Name="FirstVisibleLine"/>
-      <int Value="32" Name="CurrentLine"/>
+      <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoPila.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\RepositorioPECL1\PECL1\PECL1\Pila.hpp" Name="FileName"/>
+      <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoLista.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.hpp" Name="FileName"/>
+      <int Value="20" Name="FirstVisibleLine"/>
+      <int Value="47" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.cpp" Name="FileName"/>
+      <int Value="319" Name="FirstVisibleLine"/>
+      <int Value="346" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoArbol.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="11" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Aficionado.hpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="24" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\main.cpp" Name="FileName"/>
+      <int Value="102" Name="FirstVisibleLine"/>
+      <int Value="123" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
