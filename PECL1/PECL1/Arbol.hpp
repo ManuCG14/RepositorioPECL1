@@ -48,7 +48,7 @@ private:
 	pnodoArbol _encontrarMinimo(pnodoArbol nodo); 
 	void _destruir(pnodoArbol nodo);
 	int altura(pnodoArbol);
-    void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int p, char linkChar)
+    void dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoArbol nodo, int nivel, int p, char linkChar);
 };
 
 #endif // ARBOL_HPP
