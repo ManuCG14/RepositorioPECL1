@@ -1,21 +1,21 @@
-C:\RepositorioPECL1\PECL1\PECL1\Arbol.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Cola.hpp
-C:\RepositorioPECL1\PECL1\PECL1\NodoCola.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Lista.hpp
-C:\RepositorioPECL1\PECL1\PECL1\NodoLista.hpp
-C:\RepositorioPECL1\PECL1\PECL1\NodoPila.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Gestor.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Aficionado.cpp
-C:\RepositorioPECL1\PECL1\PECL1\NodoLista.cpp
-C:\RepositorioPECL1\PECL1\PECL1\NodoCola.cpp
-C:\RepositorioPECL1\PECL1\PECL1\Arbol.cpp
-C:\RepositorioPECL1\PECL1\PECL1\Pila.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Cola.cpp
-C:\RepositorioPECL1\PECL1\PECL1\NodoArbol.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Lista.cpp
-C:\RepositorioPECL1\PECL1\PECL1\NodoArbol.cpp
-C:\RepositorioPECL1\PECL1\PECL1\Pila.cpp
-C:\RepositorioPECL1\PECL1\PECL1\Aficionado.hpp
-C:\RepositorioPECL1\PECL1\PECL1\Gestor.cpp
-C:\RepositorioPECL1\PECL1\PECL1\NodoPila.cpp
-C:\RepositorioPECL1\PECL1\PECL1\main.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Aficionado.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoCola.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Lista.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoLista.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoPila.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Pila.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoCola.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Gestor.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Cola.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Lista.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoArbol.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Aficionado.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Cola.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoArbol.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Gestor.hpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\main.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoPila.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\NodoLista.cpp
+C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Pila.cpp

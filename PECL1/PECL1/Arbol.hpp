@@ -3,7 +3,7 @@
 
 #include "NodoArbol.hpp"
 #include "Aficionado.hpp"
-#include "Lista.hpp" // Necesario para crearABB
+#include "Lista.hpp" 
 #include <iostream>
 
 class Arbol
@@ -17,7 +17,8 @@ public:
 	void dibujarEnConsola();     
 	void mostrarSocios();        
 	void mostrarSimpatizantes(); 
-	void recorrerInorden();      
+	void recorrerInorden(); 
+	void dibujar();
 	
     // Opciones de búsqueda O
 	Aficionado* getPrimerAficionado(); 
@@ -44,6 +45,8 @@ private:
 	pnodoArbol _encontrarMaximo(pnodoArbol nodo); 
 	pnodoArbol _encontrarMinimo(pnodoArbol nodo); 
 	void _destruir(pnodoArbol nodo);
+	int altura(pnodoArbol);
+    void dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int p, char linkChar);
 };
 
 #endif // ARBOL_HPP

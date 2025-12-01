@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <iomanip>
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 #define pnodoAbb pnodoArbol
@@ -88,7 +90,7 @@ void Arbol::crearABB(Lista& lista)
 }
 
 // Auxiliar para dibujar
-void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int p,char linkChar)
+void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int p, char linkChar)
 {
     if(!nodo)
         return;
