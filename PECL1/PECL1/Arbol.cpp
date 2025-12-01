@@ -1,5 +1,4 @@
 #include "Arbol.hpp"
-
 #include <algorithm>
 #include <iomanip>
 #include <iostream>
@@ -8,8 +7,6 @@
 
 using namespace std;
 #define pnodoAbb pnodoArbol
-
-// --- Métodos Base ---
 
 Arbol::Arbol()
 {

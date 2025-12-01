@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session Name="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1.workspace">
+<Session Name="C:\RepositorioPECL1\PECL1\PECL1.workspace">
   <int Value="0" Name="m_selectedTab"/>
-  <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1.workspace" Name="m_workspaceName"/>
+  <wxString Value="C:\RepositorioPECL1\PECL1\PECL1.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="6" Name="CurrentLine"/>
+      <wxString Value="C:\RepositorioPECL1\PECL1\PECL1\Arbol.cpp" Name="FileName"/>
+      <int Value="285" Name="FirstVisibleLine"/>
+      <int Value="8" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\UAH\2ºCURSO\Estructura de datos\RepositorioPECL1\PECL1\PECL1\Arbol.hpp" Name="FileName"/>
-      <int Value="33" Name="FirstVisibleLine"/>
+      <wxString Value="C:\RepositorioPECL1\PECL1\PECL1\Arbol.hpp" Name="FileName"/>
+      <int Value="32" Name="FirstVisibleLine"/>
       <int Value="50" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
