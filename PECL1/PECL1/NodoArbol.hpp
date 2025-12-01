@@ -13,7 +13,8 @@ private:
 	Aficionado* dato;
 	NodoArbol* izquierdo;
 	NodoArbol* derecho;
-	friend class Arbol;
+	
+    friend class Arbol;
 	friend class Gestor;
 };
 

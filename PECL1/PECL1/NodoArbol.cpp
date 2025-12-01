@@ -2,11 +2,11 @@
 
 NodoArbol::NodoArbol(Aficionado* aficionado)
 {
-	dato = aficionado;
-	izquierdo = nullptr;
-	derecho = nullptr;
+	this->dato = aficionado; 
+	this->izquierdo = nullptr; 
+	this->derecho = nullptr;
 }
 
-NodoArbol::~NodoArbol()
+NodoArbol::~NodoArbol() 
 {
 }
