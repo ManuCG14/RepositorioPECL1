@@ -5,6 +5,8 @@
 #include "Aficionado.hpp"
 #include "Lista.hpp" 
 #include <iostream>
+#include <vector> // <-- ¡AÑADIR ESTA INCLUSIÓN!
+#include <string>
 
 class Arbol
 {
@@ -46,7 +48,7 @@ private:
 	pnodoArbol _encontrarMinimo(pnodoArbol nodo); 
 	void _destruir(pnodoArbol nodo);
 	int altura(pnodoArbol);
-    void dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int p, char linkChar);
+    void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int p, char linkChar)
 };
 
 #endif // ARBOL_HPP
